@@ -29,6 +29,7 @@ import {InboxComponent} from "./demo/apps/inbox/inbox.component";
 import {CalendarComponent} from "./demo/apps/calendar/calendar.component";
 import {ChatComponent} from "./demo/apps/chat/chat.component";
 import {AutocompleteComponent} from "./demo/components/autocomplete/autocomplete.component";
+import {WeekComponent} from './week/week.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,10 @@ const routes: Routes = [
         component: DashboardComponent,
         pathMatch: 'full'
       },
+			{
+				path: 'week/:id',
+				component: WeekComponent
+			},
       {
         path: 'apps/inbox',
         component: InboxComponent

@@ -71,7 +71,8 @@ import {PerfectScrollbarConfigInterface, PerfectScrollbarModule} from "ngx-perfe
 import {AgmCoreModule} from "@agm/core";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MediaReplayService} from "./core/mediareplay/media-replay.service";
-import { ClientComponent } from './client/client.component';
+import { WeekService } from './services/schedule/week.service';
+import { WeekComponent } from './week/week.component';
 
 const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -135,7 +136,8 @@ const sortablejsConfig: SortablejsOptions = {
     CalendarEditComponent,
     ChatComponent,
     AutocompleteComponent,
-    ClientComponent
+    WeekComponent,
+
   ],
   entryComponents: [
     DemoDialog,
@@ -168,7 +170,8 @@ const sortablejsConfig: SortablejsOptions = {
     DynamicMenuService,
     D3ChartService,
     MailService,
-    MediaReplayService
+    MediaReplayService,
+		WeekService
   ],
   bootstrap: [AppComponent]
 })

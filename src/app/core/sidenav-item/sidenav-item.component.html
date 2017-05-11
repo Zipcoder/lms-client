@@ -1,6 +1,7 @@
 <a class="sidenav-anchor"
    *ngIf="!item.hasSubItems()"
    md-list-item md-ripple
+	 [class.disabled] = "!item.active"
    [routerLink]="[item.route]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 
   <md-icon>{{ item.icon }}</md-icon>

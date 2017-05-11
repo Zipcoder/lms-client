@@ -3,6 +3,9 @@ import { SidenavItem } from "../sidenav-item/sidenav-item.model";
 import { BehaviorSubject, Observable } from "rxjs";
 import * as _ from 'lodash';
 
+import { WeekService } from '../../services/schedule/week.service';
+import { Week } from '../../services/schedule/models/week.model';
+
 @Injectable()
 export class SidenavService {
 
@@ -16,13 +19,24 @@ export class SidenavService {
 
   isIconSidenav: boolean;
 
-  constructor() {
-    let menu = this;
+	constructor(private weekService: WeekService) {
+		let menu = this;
 
-    let dashboard = menu.addItem('Dashboard', 'dashboard', '/', 1);
-    menu.addItem('Inbox', 'mail', '/apps/inbox', 1, '22', '#7986CC');
-    menu.addItem('Chat', 'chat', '/apps/chat', 2, '14', '#E15C74');
-    menu.addItem('Calendar', 'date_range', '/apps/calendar', 3);
+		let weeks: Week[] = [];
+
+		let dashboard = menu.addItem('Dashboard', 'dashboard', '/', 1);
+
+		let schedule = menu.addItem('Schedule', 'date_range', '/apps/calendar', 2);
+		this.weekService.find().then((weeks:Week[]) => {
+			weeks.forEach((week) => {
+				if(week.active)
+					menu.addSubItem(schedule, 'Week ' + week.week, '/week/'+week.id, week.week);
+			 });
+		})
+
+    //menu.addItem('Inbox', 'mail', '/apps/inbox', 1, '22', '#7986CC');
+    //menu.addItem('Chat', 'chat', '/apps/chat', 2, '14', '#E15C74');
+    //menu.addItem('Calendar', 'date_range', '/apps/calendar', 3);
 
     let components =  menu.addItem('Components', 'layers', null, 3);
     menu.addSubItem(components, 'Autocomplete', '/components/autocomplete', 1);
