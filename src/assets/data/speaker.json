@@ -1,0 +1,57 @@
+{
+	"2017-05-15" : [
+		{
+			"id":1,
+			"date": "2017-05-15",
+			"speaker":"Tony Chou",
+			"company":"Bank of America",
+			"topic":"Zip Code Wilmington's Meet the Experts Session",
+			"timeStart":"800",
+			"timeStop":"1000"
+		}
+	],
+	"2017-05-16": [
+		{
+			"id":2,
+			"date": "2017-05-16",
+			"speaker":"",
+			"company":"Trinity Logistics",
+			"topic":"Zip Code Wilmington's Meet the Experts Session",
+			"timeStart":"800",
+			"timeStop":"1000"
+		}
+	],
+	"2017-05-17":[
+		{
+			"id":3,
+			"date": "2017-05-17",
+			"speaker":"Paul Rosenzweig",
+			"company":"",
+			"topic":"Zip Code Wilmington's Meet the Experts Session",
+			"timeStart":"800",
+			"timeStop":"1000"
+		}
+	],
+	"2017-05-18":[
+		{
+			"id":4,
+			"date": "2017-05-18",
+			"speaker":"Rob Goodman",
+			"company":"TD Bank",
+			"topic":"Zip Code Wilmington's Meet the Experts Session",
+			"timeStart":"800",
+			"timeStop":"1000"
+		}
+	],
+	"2017-05-19": [
+		{
+			"id":5,
+			"date": "2017-05-19",
+			"speaker":"George Moore",
+			"company":"Capital One",
+			"topic":"Zip Code Wilmington's Meet the Experts Session",
+			"timeStart":"800",
+			"timeStop":"1000"
+		}
+	]
+}

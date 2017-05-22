@@ -1,7 +1,8 @@
 export class Week {
-	id: number;
-	week: number;
-	active: boolean;
+
+	readonly id: number;
+	readonly week: number;
+	readonly active: boolean;
 
 	constructor(model: any = null){
 		if(model){

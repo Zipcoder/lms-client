@@ -1,3 +1,60 @@
-<p>
-  week works!
-</p>
+<div class="schedule-week">
+	<md-tab-group>
+		<md-tab *ngFor="let day of weekDays" label={{day}}>
+			<md-card>
+				<md-card-title>Lectures</md-card-title>
+				<md-card-content>
+					<p>The days lecture:</p>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Primary Topic</th>
+								<th>Chapters from book</th>
+								<th>Chapters from videos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Objects and Classes</td>
+								<td>Ch. 1</td>
+								<td>Ch. 1</td>
+							</tr>
+						</tbody>
+						<thead>
+							<tr>
+								<th>Secondary Topic</th>
+								<th>Chapters from book</th>
+								<th>Chapters from videos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Maven</td>
+								<td>Ch. 1</td>
+								<td>Ch. 1</td>
+							</tr>
+							<tr>
+								<td>TDD</td>
+								<td>Ch. 1</td>
+								<td>Ch. 1</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</md-card-content>
+			</md-card>
+			<md-card>
+				<md-card-title>Labs</md-card-title>
+				<md-card-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla.</md-card-content>
+			</md-card>
+			<md-card>
+				<md-card-title>Speakers</md-card-title>
+				<md-card-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla.</md-card-content>
+			</md-card>
+			<md-card>
+				<md-card-title>Events</md-card-title>
+				<md-card-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla.</md-card-content>
+			</md-card>
+		</md-tab>
+	</md-tab-group>
+</div>

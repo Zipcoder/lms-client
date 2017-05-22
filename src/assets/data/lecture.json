@@ -1,0 +1,66 @@
+{
+	"2017-05-15" : [
+		{
+			"id":1,
+			"date": "2017-05-15",
+			"topic":"Fundatmental Programing Structure",
+			"reading":"Ch.1",
+			"video":"Video 1",
+			"timeStart":"900",
+			"timeStop":"1200"
+		},
+		{
+			"id":1,
+			"date": "2017-05-15",
+			"topic":"Objects and Classes",
+			"reading":"Ch.1",
+			"video":"Video 1",
+			"timeStart":"900",
+			"timeStop":"1200"
+		}
+	],
+	"2017-05-16": [
+		{
+			"id":2,
+			"date": "2017-05-16",
+			"topic":"Inheritance",
+			"reading":"Ch.2",
+			"video":"Video 2",
+			"timeStart":"900",
+			"timeStop":"1200"
+		}
+	],
+	"2017-05-17":[
+		{
+			"id":3,
+			"date": "2017-05-17",
+			"topic":"Interfaces",
+			"reading":"Ch.3",
+			"video":"Video 3",
+			"timeStart":"900",
+			"timeStop":"1200"
+		}
+	],
+	"2017-05-18":[
+		{
+			"id":4,
+			"date": "2017-05-18",
+			"topic":"Exceptions",
+			"reading":"Ch.4",
+			"video":"Video 4",
+			"timeStart":"900",
+			"timeStop":"1200"
+		}
+	],
+	"2017-05-19": [
+		{
+			"id":5,
+			"date": "2017-05-19",
+			"topic":"Generics",
+			"reading":"Ch.5",
+			"video":"Video 5",
+			"timeStart":"900",
+			"timeStop":"1200"
+		}
+	]
+}

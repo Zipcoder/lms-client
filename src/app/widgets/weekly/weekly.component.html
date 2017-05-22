@@ -1,0 +1,27 @@
+<div class="widget-weekly" fxLayout="row" fxLayoutAlign="center stretch" fxLayoutWrap="wrap">
+	<div class="header-controls">
+		<button class="md-button left" (click)="prevMonday()"><md-icon>chevron_left</md-icon></button><button class="md-button middle" (click)="today()">Today</button><button class="md-button right" (click)="nextMonday()"><md-icon>chevron_right</md-icon></button>
+		<span>{{days[0].date | date:'MMM d'}} - {{days[4].date | date:'yMMMd'}}</span>
+	</div>
+	<div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th *ngFor="let day of days">{{day.date | date:'EEE MMM d'}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td *ngFor="let day of days">
+						<ul>
+							<li *ngFor="let lecture of day.lectures">{{lecture.topic}}</li>
+							<li *ngFor="let lab of day.labs">{{lab.title}}</li>
+							<li *ngFor="let speaker of day.speakers">{{speaker.speaker}}</li>
+							<li *ngFor="let event of day.events">{{event.event}}</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -4,10 +4,10 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export abstract class BaseService {
-  config: String;
-  http:   Http;
-  modelName: string;
-  model: any;
+  config:String;
+  http:Http;
+  modelName:string;
+  model:any;
 
   constructor(@Inject(Http) http: Http) {
     this.http   = http;

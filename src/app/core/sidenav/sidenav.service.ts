@@ -25,18 +25,19 @@ export class SidenavService {
 		let weeks: Week[] = [];
 
 		let dashboard = menu.addItem('Dashboard', 'dashboard', '/', 1);
-
+/*
 		let schedule = menu.addItem('Schedule', 'date_range', '/apps/calendar', 2);
 		this.weekService.find().then((weeks:Week[]) => {
 			weeks.forEach((week) => {
-				if(week.active)
-					menu.addSubItem(schedule, 'Week ' + week.week, '/week/'+week.id, week.week);
-			 });
+					if(week.active){
+						menu.addSubItem(schedule, 'Week ' + week.week, '/week/'+week.id, week.week);
+					}
+			});
 		})
 
-    //menu.addItem('Inbox', 'mail', '/apps/inbox', 1, '22', '#7986CC');
-    //menu.addItem('Chat', 'chat', '/apps/chat', 2, '14', '#E15C74');
-    //menu.addItem('Calendar', 'date_range', '/apps/calendar', 3);
+		menu.addItem('Inbox', 'mail', '/apps/inbox', 1, '22', '#7986CC');
+		menu.addItem('Chat', 'chat', '/apps/chat', 2, '14', '#E15C74');
+		menu.addItem('Calendar', 'date_range', '/apps/calendar', 3);
 
     let components =  menu.addItem('Components', 'layers', null, 3);
     menu.addSubItem(components, 'Autocomplete', '/components/autocomplete', 1);
@@ -81,6 +82,7 @@ export class SidenavService {
     let level3 = menu.addSubItem(level2, 'Level 3', '/level1/level2/level3', 3);
     let level4 = menu.addSubItem(level3, 'Level 4', '/level1/level2/level3/level4', 4);
     let level5 = menu.addSubItem(level4, 'Level 5', '/level1/level2/level3/level4/level5', 5);
+*/
   }
 
   addItem(name: string, icon: string, route: string, position: number, badge?: string, badgeColor?: string) {

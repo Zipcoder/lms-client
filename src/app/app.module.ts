@@ -73,6 +73,11 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MediaReplayService} from "./core/mediareplay/media-replay.service";
 import { WeekService } from './services/schedule/week.service';
 import { WeekComponent } from './week/week.component';
+import { WeeklyComponent } from './widgets/weekly/weekly.component';
+import { LectureService } from './services/lecture/lecture.service';
+import { LabService } from './services/lab/lab.service';
+import { SpeakerService } from './services/speaker/speaker.service';
+import { EventService } from './services/event/event.service';
 
 const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -137,6 +142,7 @@ const sortablejsConfig: SortablejsOptions = {
     ChatComponent,
     AutocompleteComponent,
     WeekComponent,
+    WeeklyComponent,
 
   ],
   entryComponents: [
@@ -171,7 +177,11 @@ const sortablejsConfig: SortablejsOptions = {
     D3ChartService,
     MailService,
     MediaReplayService,
-		WeekService
+		WeekService,
+		LectureService,
+		LabService,
+		SpeakerService,
+		EventService
   ],
   bootstrap: [AppComponent]
 })
