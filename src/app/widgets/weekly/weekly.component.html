@@ -7,7 +7,7 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th *ngFor="let day of days">{{day.date | date:'EEE MMM d'}}</th>
+					<th *ngFor="let day of days"><a href="daily/{{day.date | date:'y-MM-d'}}">{{day.date | date:'EEE MMM d'}}</a></th>
 				</tr>
 			</thead>
 			<tbody>

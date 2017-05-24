@@ -1,0 +1,16 @@
+[
+	{
+		"id":2,
+		"date": "2017-05-16",
+		"title":"Lab 2",
+		"module":"Objects and Classes",
+		"repo":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
+	},
+	{
+		"id":3,
+		"date": "2017-05-17",
+		"title":"Lab 3",
+		"module":"Inheritance",
+		"repo":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
+	}
+]

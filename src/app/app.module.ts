@@ -78,6 +78,7 @@ import { LectureService } from './services/lecture/lecture.service';
 import { LabService } from './services/lab/lab.service';
 import { SpeakerService } from './services/speaker/speaker.service';
 import { EventService } from './services/event/event.service';
+import { DailyComponent } from './daily/daily.component';
 
 const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -143,6 +144,7 @@ const sortablejsConfig: SortablejsOptions = {
     AutocompleteComponent,
     WeekComponent,
     WeeklyComponent,
+    DailyComponent,
 
   ],
   entryComponents: [

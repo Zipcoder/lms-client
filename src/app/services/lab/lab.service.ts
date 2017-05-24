@@ -1,12 +1,12 @@
 import { Injectable, Inject } from '@angular/core';
 import { Http } from '@angular/http';
-import { DateRangeService } from '../shared/date-range.service';
+import { DateService } from '../shared/date.service';
 import { Lab } from '../../shared/models/lab.model';
 
 @Injectable()
-export class LabService extends DateRangeService {
+export class LabService extends DateService {
 	model:any;
-	modelName:string = 'lab.json';
+	modelName:string = 'lab';
 
   constructor(@Inject(Http) http:Http) {
 		super(http);

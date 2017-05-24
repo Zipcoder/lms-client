@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { DateRangeService } from './date-range.service';
+import { DateService } from './date.service';
 
 describe('DateRangeService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [DateRangeService]
+      providers: [DateService]
     });
   });
 
-  it('should be created', inject([DateRangeService], (service: DateRangeService) => {
+  it('should be created', inject([DateService], (service: DateService) => {
     expect(service).toBeTruthy();
   }));
 });

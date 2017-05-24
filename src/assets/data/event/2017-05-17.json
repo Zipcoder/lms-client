@@ -3,6 +3,7 @@
 		"id":1,
 		"date": "2017-05-17",
 		"event":"Open House",
+		"location":"Solar System",
 		"description":"Breakfast Open House",
 		"timeStart":"1800",
 		"timeStop":"2000"

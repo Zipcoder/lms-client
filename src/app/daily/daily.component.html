@@ -1,0 +1,91 @@
+<md-card>
+	<md-card-title>Lectures</md-card-title>
+	<md-card-content>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Topic</th>
+					<th>Chapters from book</th>
+					<th>Chapters from videos</th>
+					<th>Time</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let lecture of lectures">
+					<td>{{lecture.topic}}</td>
+					<td>{{lecture.reading}}</td>
+					<td>{{lecture.video}}</td>
+					<td>{{lecture.timeStart}}-{{lecture.timeStop}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</md-card-content>
+</md-card>
+<md-card>
+	<md-card-title>Labs</md-card-title>
+	<md-card-content>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Module</th>
+					<th>Repo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let lab of labs">
+					<td>{{lab.title}}</td>
+					<td>{{lab.module}}</td>
+					<td>{{lab.repo}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</md-card-content>
+</md-card>
+<md-card>
+	<md-card-title>Speakers</md-card-title>
+	<md-card-content>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Speaker</th>
+					<th>Company</th>
+					<th>Topic</th>
+					<th>Time</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let speaker of speakers">
+					<td>{{speaker.speaker}}</td>
+					<td>{{speaker.company}}</td>
+					<td>{{speaker.topic}}</td>
+					<td>{{speaker.timeStart}}-{{speaker.timeStop}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</md-card-content>
+</md-card>
+
+<md-card>
+	<md-card-title>Events</md-card-title>
+	<md-card-content>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Event</th>
+					<th>Location</th>
+					<th>Description</th>
+					<th>Time</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let event of events">
+					<td>{{event.event}}</td>
+					<td>{{event.location}}</td>
+					<td>{{event.description}}</td>
+					<td>{{event.timeStart}}-{{event.timeStop}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</md-card-content>
+</md-card>

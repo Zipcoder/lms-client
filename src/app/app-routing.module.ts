@@ -30,6 +30,7 @@ import {CalendarComponent} from "./demo/apps/calendar/calendar.component";
 import {ChatComponent} from "./demo/apps/chat/chat.component";
 import {AutocompleteComponent} from "./demo/components/autocomplete/autocomplete.component";
 import {WeekComponent} from './week/week.component';
+import {DailyComponent} from './daily/daily.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,10 @@ const routes: Routes = [
 			{
 				path: 'week/:id',
 				component: WeekComponent
+			},
+			{
+				path: 'daily/:date',
+				component: DailyComponent
 			},
       {
         path: 'apps/inbox',
