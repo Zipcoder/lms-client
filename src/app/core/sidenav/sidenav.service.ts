@@ -5,6 +5,8 @@ import * as _ from 'lodash';
 
 import { WeekService } from '../../services/schedule/week.service';
 import { Week } from '../../services/schedule/models/week.model';
+import { LabService } from '../../services/lab/lab.service';
+import { Module } from '../../services/lab/models/module.model';
 
 @Injectable()
 export class SidenavService {
@@ -19,12 +21,26 @@ export class SidenavService {
 
   isIconSidenav: boolean;
 
-	constructor(private weekService: WeekService) {
+	constructor(private weekService: WeekService, private labService:LabService) {
 		let menu = this;
 
 		let weeks: Week[] = [];
 
 		let dashboard = menu.addItem('Dashboard', 'dashboard', '/', 1);
+
+		this.labService.findModules().then((modules:Module[]) => {
+			let labs = menu.addItem('Labs', 'assignment', null, 2);
+			modules.forEach((module, index) => {
+				let mod = menu.addSubItem(labs, module.title, null, index+1);
+				module.microLabs.forEach((microlab, labIndex) => {
+					menu.addSubItem(mod, microlab.title, '/icons', 1);
+				})
+				module.labs.forEach((lab, Labindex) => {
+					menu.addSubItem(mod, lab.title, '/icons', 2);
+				})
+			})
+		})
+
 /*
 		let schedule = menu.addItem('Schedule', 'date_range', '/apps/calendar', 2);
 		this.weekService.find().then((weeks:Week[]) => {

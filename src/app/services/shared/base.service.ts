@@ -55,6 +55,8 @@ export abstract class BaseService {
         url = url + '?populate=' + populate.join(', ');
       }
 
+			console.log('URL', url);
+
       this.http.get(url)
         .map(res => res.json())
         .subscribe(res => {

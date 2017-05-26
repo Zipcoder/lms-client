@@ -1,10 +1,12 @@
-[
-	{
-		"id":1,
-		"date": "2017-05-17",
-		"event":"Open House",
-		"description":"Breakfast Open House",
-		"timeStart":"1800",
-		"timeStop":"2000"
-	}
-]
+{
+	"2017-05-15" : [
+		{
+			"id":1,
+			"date": "2017-05-17",
+			"event":"Open House",
+			"description":"Breakfast Open House",
+			"timeStart":"1800",
+			"timeStop":"2000"
+		}
+	]
+}
