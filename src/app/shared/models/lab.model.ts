@@ -1,5 +1,8 @@
 export class Lab {
 	private _id:number;
+	get id(){
+		return this._id;
+	}
 	private _date:Date;
 	private _title:string;
 	get title(){

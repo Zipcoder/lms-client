@@ -33,10 +33,10 @@ export class SidenavService {
 			modules.forEach((module, index) => {
 				let mod = menu.addSubItem(labs, module.title, null, index+1);
 				module.microLabs.forEach((microlab, labIndex) => {
-					menu.addSubItem(mod, microlab.title, '/icons', 1);
+					menu.addSubItem(mod, microlab.title, '/lab/' + microlab.id, 1);
 				})
 				module.labs.forEach((lab, Labindex) => {
-					menu.addSubItem(mod, lab.title, '/icons', 2);
+					menu.addSubItem(mod, lab.title, '/lab/' + lab.id, 2);
 				})
 			})
 		})
