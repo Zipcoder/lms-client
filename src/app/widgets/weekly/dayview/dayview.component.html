@@ -1,0 +1,81 @@
+<md-card>
+    <md-card-title class="day-title">
+        {{day.date | date: 'EEE MMM d'}}
+    </md-card-title>
+    <md-card-content>
+        <table class="table table-striped">
+            <thead>
+                <span class="table-title">Lectures</span>
+                <tr>
+                    <th>Topic</th>
+                    <th>Chapters from book</th>
+                    <th>Chapters from videos</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let lecture of day.lectures">
+                    <td>{{lecture.topic}}</td>
+                    <td>{{lecture.reading}}</td>
+                    <td>{{lecture.video}}</td>
+                    <td>{{lecture.timeStart}} - {{lecture.timeStop}}</td>
+                </tr>
+            </tbody>
+        </table>
+            <table class="table table-striped">
+				<thead>
+                    <span class="table-title">Labs</span>
+					<tr>
+						<th>Title</th>
+						<th>Module</th>
+						<th>Repo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let lab of day.labs">
+						<td>{{lab.title}}</td>
+						<td>{{lab.module}}</td>
+						<td>{{lab._repo}}</td>
+					</tr>
+				</tbody>
+			</table>
+                <table class="table table-striped">
+				<thead>
+                    <span class="table-title">Speakers</span>
+					<tr>
+						<th>Speaker</th>
+						<th>Company</th>
+						<th>Topic</th>
+						<th>Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let speaker of day.speakers">
+						<td>{{speaker.speaker}}</td>
+						<td>{{speaker.company}}</td>
+						<td>{{speaker.topic}}</td>
+						<td>{{speaker.timeStart}} - {{speaker.timeStop}}</td>
+					</tr>
+				</tbody>
+			</table>
+            <table class="table table-striped">
+				<thead>
+                    <span class="table-title">Events</span>
+					<tr>
+						<th>Event</th>
+						<th>Location</th>
+						<th>Description</th>
+						<th>Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let event of day.events">
+						<td>{{event.event}}</td>
+						<td>{{event.location}}</td>
+						<td>{{event.description}}</td>
+						<td>{{event.timeStart}} - {{event.timeStop}}</td>
+					</tr>
+				</tbody>
+			</table>
+    </md-card-content>
+</md-card>

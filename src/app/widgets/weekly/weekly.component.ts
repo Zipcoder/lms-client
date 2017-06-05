@@ -8,6 +8,7 @@ import { SpeakerService } from '../../services/speaker/speaker.service';
 import { Speaker } from '../../shared/models/speaker.model';
 import { EventService } from '../../services/event/event.service';
 import { Event } from '../../shared/models/event.model';
+import { DayViewComponent } from './dayview/dayview.component';
 
 @Component({
 	selector: 'ms-weekly',

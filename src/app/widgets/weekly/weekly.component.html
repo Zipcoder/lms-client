@@ -3,25 +3,18 @@
 		<button class="md-button left" (click)="prevMonday()"><md-icon>chevron_left</md-icon></button><button class="md-button middle" (click)="today()">Today</button><button class="md-button right" (click)="nextMonday()"><md-icon>chevron_right</md-icon></button>
 		<span>{{days[0].date | date:'MMM d'}} - {{days[4].date | date:'yMMMd'}}</span>
 	</div>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th *ngFor="let day of days"><a href="#{{day.date}}">{{day.date | date:'EEE MMM d'}}</a></th>
+			</tr>
+		</thead>
+	</table>
 	<div>
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th *ngFor="let day of days"><a href="daily/{{day.date | date:'y-MM-d'}}">{{day.date | date:'EEE MMM d'}}</a></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td *ngFor="let day of days">
-						<ul>
-							<li *ngFor="let lecture of day.lectures">{{lecture.topic}}</li>
-							<li *ngFor="let lab of day.labs">{{lab.title}}</li>
-							<li *ngFor="let speaker of day.speakers">{{speaker.speaker}}</li>
-							<li *ngFor="let event of day.events">{{event.event}}</li>
-						</ul>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<md-list *ngFor="let day of days">
+			<a id="{{day.date}}">
+				<day-view [day]="day" id="{{day.date}}"></day-view>
+			</a>
+		</md-list>
 	</div>
 </div>
