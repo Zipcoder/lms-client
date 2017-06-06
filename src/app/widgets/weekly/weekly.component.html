@@ -1,20 +1,24 @@
 <div class="widget-weekly" fxLayout="row" fxLayoutAlign="center stretch" fxLayoutWrap="wrap">
-	<div class="header-controls">
-		<button class="md-button left" (click)="prevMonday()"><md-icon>chevron_left</md-icon></button><button class="md-button middle" (click)="today()">Today</button><button class="md-button right" (click)="nextMonday()"><md-icon>chevron_right</md-icon></button>
-		<span>{{days[0].date | date:'MMM d'}} - {{days[4].date | date:'yMMMd'}}</span>
+	<div id="header">
+		<div class="header-controls">
+			<button class="md-button left" (click)="prevMonday()"><md-icon>chevron_left</md-icon></button><button class="md-button middle" (click)="today()">Today</button><button class="md-button right" (click)="nextMonday()"><md-icon>chevron_right</md-icon></button>
+			<span>{{days[0].date | date:'MMM d'}} - {{days[4].date | date:'yMMMd'}}</span>
+		</div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th *ngFor="let day of days">
+						<div clickable (click)="changeDayBtnPressed(day)">
+							{{day.date | date:'EEE MMM d'}}
+						</div>
+					</th>
+				</tr>
+			</thead>
+		</table>
 	</div>
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th *ngFor="let day of days"><a href="#{{day.date}}">{{day.date | date:'EEE MMM d'}}</a></th>
-			</tr>
-		</thead>
-	</table>
-	<div>
-		<md-list *ngFor="let day of days">
-			<a id="{{day.date}}">
-				<day-view [day]="day" id="{{day.date}}"></day-view>
-			</a>
-		</md-list>
+	<div class="scrollable-content">
+		<div>
+			<day-view [day]=dayShown></day-view>
+		</div>
 	</div>
 </div>

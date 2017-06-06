@@ -21,6 +21,7 @@ export class WeeklyComponent implements OnInit {
 	private monday: Date;
 	private friday: Date;
 	private days: Day[] = [];
+	private dayShown: Day;
 
 	constructor(
 		private lectureService: LectureService,
@@ -31,6 +32,7 @@ export class WeeklyComponent implements OnInit {
 
 	ngOnInit() {
 		this.today();
+		this.dayShown = this.days[0];
 	}
 
 	private getMonday = (date): Date => {
@@ -67,6 +69,7 @@ export class WeeklyComponent implements OnInit {
 		this.fetchLabs();
 		this.fetchSpeakers();
 		this.fetchEvents();
+		this.dayShown = this.days[0];
 
 		console.log(this.days);
 	}
@@ -105,5 +108,9 @@ export class WeeklyComponent implements OnInit {
 				this.days[i].events = events[isoDate];
 			}
 		})
+	}
+
+	private changeDayBtnPressed(dayPressed){
+		this.dayShown = dayPressed;
 	}
 }
