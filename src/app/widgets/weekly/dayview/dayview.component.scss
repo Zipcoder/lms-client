@@ -4,20 +4,12 @@ md-card{
 
 .day-title{
     font-weight: bold;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid green;
     font-size: xx-large;
 }
 
-.lecture-list{
-    background-color: lightblue;
-}
-
-.labs-list{
-    background-color: lightpink;
-}
-
 th{
-    padding: 10px;
+
 }
 
 td{
@@ -31,6 +23,26 @@ td{
 .day-view{
     margin-top: 2%;
     margin-bottom: 2%;
-    background-color: white;
-    border: 15px solid white;
+    background-color: #64AA66;
+    border: 15px solid #64AA66;
+    padding-left: 2%; padding-right: 2%; margin-left: 2%; margin-right: 2%;
+    color: white;
+    th{
+        padding: 10px;
+        color: white;
+        background-color: green;
+    }
+    tr{
+        height: 5px;
+    }
+}
+
+table{
+    background-color: #64AA66;
+    color: white;
+    margin-top: 2%
+}
+
+.table-header{
+    color: white;
 }

@@ -7,8 +7,8 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th *ngFor="let day of days">
-						<div clickable (click)="changeDayBtnPressed(day)">
+					<th *ngFor="let day of days" class="daily-btn" clickable (click)="changeDayBtnPressed(day)">
+						<div>
 							{{day.date | date:'EEE MMM d'}}
 						</div>
 					</th>
