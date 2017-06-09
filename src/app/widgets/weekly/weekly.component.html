@@ -7,7 +7,7 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th *ngFor="let day of days; let i = index" class="daily-btn" clickable (click)="changeDayBtnPressed(day, i)" [class.active]="i == selectedDay">
+					<th *ngFor="let day of days; let i = index" class="daily-btn" clickable=dayToggled (click)="changeDayBtnPressed(day, i)" [class.active]="i == selectedDay">
 						<div>
 							{{day.date | date:'EEE MMM d'}}
 						</div>

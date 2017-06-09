@@ -3,7 +3,7 @@
         {{day.date | date: 'EEE MMM d'}}
     </div>
 	<div class="day-view-content">
-        <table class="table">
+        <table class="table" *ngIf="day.lectures">
             <thead class="top-box">
                 <span class="table-title">Lectures</span>
                 <tr class="table-header">
@@ -26,7 +26,7 @@
                 </tr>
             </tbody>
         </table>
-            <table class="table">
+            <table class="table" *ngIf="day.labs">
 				<thead>
                     <span class="table-title">Labs</span>
 					<tr class="table-header">
@@ -49,7 +49,7 @@
 					</tr>
 				</tbody>
 			</table>
-                <table class="table table-striped">
+                <table class="table" *ngIf="day.speakers">
 				<thead>
                     <span class="table-title">Speakers</span>
 					<tr class="table-header">
@@ -76,7 +76,7 @@
 					</tr>
 				</tbody>
 			</table>
-            <table class="table table-striped">
+            <table class="table" *ngIf="day.events">
 				<thead>
                     <span class="table-title">Events</span>
 					<tr class="table-header">
