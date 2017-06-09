@@ -1,6 +1,7 @@
 .widget-weekly{
-	background: rgba(0, 0, 0, 0) linear-gradient(60deg, rgb(129, 198, 131), rgb(98, 168, 100)) repeat scroll 0% 0%;
+	background-color: rgb(129, 198, 131);
 	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+	height: 95%;
 
 	.header-controls{
 		padding:18px;
@@ -16,14 +17,22 @@
 	}
 	.md-button.left {
 	    border-radius: 5px 0 0 5px;
+		text-align: center;
+		color: #DBF6DC;
+		background-color: #078D53;
 	}
 	.md-button.middle {
 	    border-radius: 0;
 	    border-left: 1px solid rgba(200, 200, 200, 0.96);
 	    border-right: 1px solid rgba(200, 200, 200, 0.96);
+		color: #DBF6DC;
+		background-color: #078D53;
 	}
 	.md-button.right {
 	    border-radius: 0 5px 5px 0;
+		text-align: center;
+		color: #DBF6DC;
+		background-color: #078D53;
 	}
 	.md-button:not([disabled]):hover {
 	    background-color: rgba(255, 255, 255, 1.0);
@@ -62,4 +71,31 @@
 		}
 	}
 
+	table .daily-btn:hover{
+		background-color: #078D53
+	}
+
+	table th.daily-btn.active{
+		background-color: #078D53;
+	}
+
+	table .daily-btn{
+		background-color: #7BC07D;
+		border: 2px solid #078D53;
+	}
+
+}
+
+.scrollable-content{
+	width: 150%
+}
+
+@keyframes fade-in {
+ 	0%   { opacity: 1; }
+	50% {opacity: 0;}
+  	100% { opacity: 1; }
+}
+
+.fade-div{
+	animation: fade-in 1s;
 }

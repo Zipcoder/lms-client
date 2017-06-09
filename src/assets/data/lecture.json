@@ -6,6 +6,7 @@
 			"topic":"Fundatmental Programing Structure",
 			"reading":"Ch.1",
 			"video":"Video 1",
+			"videoUrl":"https://app.pluralsight.com/library/courses/java-fundamentals-language/table-of-contents",
 			"timeStart":"900",
 			"timeStop":"1200"
 		},
@@ -15,6 +16,7 @@
 			"topic":"Objects and Classes",
 			"reading":"Ch.1",
 			"video":"Video 1",
+			"videoUrl":"https://app.pluralsight.com/library/courses/java-fundamentals-language/table-of-contents",
 			"timeStart":"900",
 			"timeStop":"1200"
 		}
@@ -26,6 +28,7 @@
 			"topic":"Inheritance",
 			"reading":"Ch.2",
 			"video":"Video 2",
+			"videoUrl":"https://app.pluralsight.com/library/courses/java-fundamentals-language/table-of-contents",
 			"timeStart":"900",
 			"timeStop":"1200"
 		}
@@ -37,6 +40,7 @@
 			"topic":"Interfaces",
 			"reading":"Ch.3",
 			"video":"Video 3",
+			"videoUrl":"https://app.pluralsight.com/library/courses/java-fundamentals-language/table-of-contents",
 			"timeStart":"900",
 			"timeStop":"1200"
 		}
@@ -48,6 +52,7 @@
 			"topic":"Exceptions",
 			"reading":"Ch.4",
 			"video":"Video 4",
+			"videoUrl":"https://app.pluralsight.com/library/courses/java-fundamentals-language/table-of-contents",
 			"timeStart":"900",
 			"timeStop":"1200"
 		}
@@ -59,6 +64,7 @@
 			"topic":"Generics",
 			"reading":"Ch.5",
 			"video":"Video 5",
+			"videoUrl":"https://app.pluralsight.com/library/courses/java-fundamentals-language/table-of-contents",
 			"timeStart":"900",
 			"timeStop":"1200"
 		}

@@ -1,0 +1,63 @@
+.day-view{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: rgb(129, 198, 131);
+    border: 15px solid rgb(129, 198, 131);
+    padding-left: 2%; padding-right: 2%; margin-left: 2%; margin-right: 2%;
+    color: white;
+    th{
+        padding: 10px;
+        color: white;
+        background-color: #078D53;
+    }
+    tr{
+        height: 5px;
+    }
+    table{
+        background-color: rgb(129, 198, 131);
+        color: white;
+        margin-top: 2%
+    }
+    .table-header{
+        color: white;
+    }
+    md-card{
+        margin-bottom: 20px;
+    }
+
+    .day-title{
+        font-weight: bold;
+        border-bottom: 1px solid green;
+        font-size: xx-large;
+    }
+    td{
+        padding: 10px;
+    }
+
+    .table-title{
+        font-weight: bold;
+        font-size: 1.4em;
+        display: inline-block;
+        padding-bottom: 4%;
+    }
+
+    .top-box{
+        margin-bottom: 20px;
+    }
+    a:link{
+        color: #E2FFE3;
+    }
+    a:visited{
+        color: #1E331F;
+    }
+    a:hover{
+        color: #2D4D2E;
+    }
+    div.no-assign-text{
+        text-align: center;
+        display: block;
+        margin-top: 5%;
+        font-size: 1.5em;
+    }
+
+}

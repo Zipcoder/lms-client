@@ -4,7 +4,9 @@
 			"id":1,
 			"date": "2017-05-15",
 			"speaker":"Tony Chou",
+			"speakerUrl":"https://www.linkedin.com/in/tony-chou-33569466/",
 			"company":"Bank of America",
+			"companyUrl":"https://www.bankofamerica.com/",
 			"topic":"Zip Code Wilmington's Meet the Experts Session",
 			"timeStart":"800",
 			"timeStop":"1000"
@@ -16,6 +18,7 @@
 			"date": "2017-05-16",
 			"speaker":"",
 			"company":"Trinity Logistics",
+			"companyUrl":"https://trinitylogistics.com/",
 			"topic":"Zip Code Wilmington's Meet the Experts Session",
 			"timeStart":"800",
 			"timeStop":"1000"
@@ -26,7 +29,9 @@
 			"id":3,
 			"date": "2017-05-17",
 			"speaker":"Paul Rosenzweig",
+			"speakerUrl":"",
 			"company":"",
+			"companyUrl":"",
 			"topic":"Zip Code Wilmington's Meet the Experts Session",
 			"timeStart":"800",
 			"timeStop":"1000"
@@ -37,7 +42,9 @@
 			"id":4,
 			"date": "2017-05-18",
 			"speaker":"Rob Goodman",
+			"speakerUrl":"https://www.linkedin.com/in/robert-goodman-ab90362/",
 			"company":"TD Bank",
+			"companyUrl":"https://www.tdbank.com/",
 			"topic":"Zip Code Wilmington's Meet the Experts Session",
 			"timeStart":"800",
 			"timeStop":"1000"
@@ -48,7 +55,9 @@
 			"id":5,
 			"date": "2017-05-19",
 			"speaker":"George Moore",
+			"speakerUrl":"https://www.linkedin.com/in/mooreisenough/",
 			"company":"Capital One",
+			"companyUrl":"https://www.capitalone.com/",
 			"topic":"Zip Code Wilmington's Meet the Experts Session",
 			"timeStart":"800",
 			"timeStop":"1000"

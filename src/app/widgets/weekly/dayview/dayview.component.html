@@ -1,0 +1,104 @@
+<div class="day-view">
+    <div class="day-title">
+        {{day.date | date: 'EEE MMM d'}}
+    </div>
+	<div class="day-view-content">
+        <table class="table" *ngIf="day.lectures">
+            <thead class="top-box">
+                <span class="table-title">Lectures</span>
+                <tr class="table-header">
+                    <th>Topic</th>
+                    <th>Chapters from book</th>
+                    <th>Chapters from videos</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let lecture of day.lectures">
+                    <td>{{lecture.topic}}</td>
+                    <td>{{lecture.reading}}</td>
+					<td>
+						<a target="_blank" href="{{lecture.videoUrl}}">
+							{{lecture.video}}
+						</a>
+					</td>
+                    <td>{{lecture.timeStart}} - {{lecture.timeStop}}</td>
+                </tr>
+            </tbody>
+        </table>
+            <table class="table" *ngIf="day.labs">
+				<thead>
+                    <span class="table-title">Labs</span>
+					<tr class="table-header">
+						<th>Title</th>
+						<th>Module</th>
+						<th>Repo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let lab of day.labs">
+						<td class="labs" [routerLink]="['/lab', lab.id]">
+						<a [routerLink]="['/lab', lab.id]">
+							{{lab.title}}
+						</a>
+						</td>
+						<td>{{lab.module}}</td>
+						<td>
+							<a target="_blank" href={{lab._repoUrl}}>
+								{{lab._repo}}
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+                <table class="table" *ngIf="day.speakers">
+				<thead>
+                    <span class="table-title">Speakers</span>
+					<tr class="table-header">
+						<th>Speaker</th>
+						<th>Company</th>
+						<th>Topic</th>
+						<th>Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let speaker of day.speakers">
+						<td>
+							<a target="_blank" href={{speaker.speakerUrl}}>
+								{{speaker.speaker}}
+							</a>
+						</td>
+						<td>
+							<a target="_blank" href={{speaker.companyUrl}}>
+								{{speaker.company}}
+							</a>
+						</td>
+						<td>{{speaker.topic}}</td>
+						<td>{{speaker.timeStart}} - {{speaker.timeStop}}</td>
+					</tr>
+				</tbody>
+			</table>
+            <table class="table" *ngIf="day.events">
+				<thead>
+                    <span class="table-title">Events</span>
+					<tr class="table-header">
+						<th>Event</th>
+						<th>Location</th>
+						<th>Description</th>
+						<th>Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let event of day.events">
+						<td>{{event.event}}</td>
+						<td>{{event.location}}</td>
+						<td>{{event.description}}</td>
+						<td>{{event.timeStart}} - {{event.timeStop}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="no-assign-text" *ngIf="!day.events && !day.speakers && !day.lectures && !day.labs">
+				<span class="text">Nothing Assigned Today</span>
+			</div>
+	</div>
+</div>

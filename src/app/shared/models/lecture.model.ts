@@ -4,6 +4,7 @@ export class Lecture{
 	private topic:string;
 	private reading:string;
 	private video:string;
+	private videoUrl:string;
 	private timeStart:string;
 	private timeStop:string;
 
@@ -13,6 +14,7 @@ export class Lecture{
 		this.topic = model.topic;
 		this.reading = model.reading;
 		this.video = model.video;
+		this.videoUrl = model.videoUrl;
 		this.timeStart = model.timeStart;
 		this.timeStop = model.timeStop;
 	}
