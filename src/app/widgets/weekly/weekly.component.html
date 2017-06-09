@@ -1,7 +1,7 @@
 <div class="widget-weekly" fxLayout="row" fxLayoutAlign="center stretch" fxLayoutWrap="wrap">
 	<div id="header">
 		<div class="header-controls">
-			<button class="md-button left" (click)="prevMonday()"><md-icon>chevron_left</md-icon></button><button class="md-button middle" (click)="todayBtnClicked()">Today</button><button class="md-button right" (click)="nextMonday()"><md-icon>chevron_right</md-icon></button>
+			<button class="md-button left" (click)="prevMonday()" [disabled]=dayToggled><md-icon>chevron_left</md-icon></button><button class="md-button middle" (click)="todayBtnClicked()" [disabled]=dayToggled>Today</button><button class="md-button right" (click)="nextMonday()" [disabled]=dayToggled><md-icon>chevron_right</md-icon></button>
 			<span>{{days[0].date | date:'MMM d'}} - {{days[4].date | date:'yMMMd'}}</span>
 		</div>
 		<table class="table table-striped">

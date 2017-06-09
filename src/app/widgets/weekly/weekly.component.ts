@@ -49,6 +49,7 @@ export class WeeklyComponent implements OnInit {
 	private today = () => {
 		this.monday = this.getMonday(new Date);
 		this.setDays(this.monday.getDate());
+		console.log(this.monday);
 	}
 	private nextMonday = () => {
 		this.toggleAnimation();
@@ -152,6 +153,7 @@ export class WeeklyComponent implements OnInit {
 
 	private todayBtnClicked(){
 		this.toggleAnimation();
+		this.today();
 		let index = this.setInitDay();
 		this.selectedDay = index;
 		setTimeout(() => {
