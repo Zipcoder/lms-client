@@ -4,7 +4,7 @@
     </div>
 	<div class="day-view-content">
         <table class="table">
-            <thead>
+            <thead class="top-box">
                 <span class="table-title">Lectures</span>
                 <tr class="table-header">
                     <th>Topic</th>
@@ -37,7 +37,9 @@
 				</thead>
 				<tbody>
 					<tr *ngFor="let lab of day.labs">
-						<td>{{lab.title}}</td>
+						<td clickable class="labs" [routerLink]="['/lab', lab.id]">
+							{{lab.title}}
+						</td>
 						<td>{{lab.module}}</td>
 						<td>
 							<a target="_blank" href={{lab._repoUrl}}>
