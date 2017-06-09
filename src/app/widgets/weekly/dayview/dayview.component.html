@@ -37,8 +37,10 @@
 				</thead>
 				<tbody>
 					<tr *ngFor="let lab of day.labs">
-						<td clickable class="labs" [routerLink]="['/lab', lab.id]">
+						<td class="labs" [routerLink]="['/lab', lab.id]">
+						<a [routerLink]="['/lab', lab.id]">
 							{{lab.title}}
+						</a>
 						</td>
 						<td>{{lab.module}}</td>
 						<td>
@@ -95,5 +97,8 @@
 					</tr>
 				</tbody>
 			</table>
+			<div class="no-assign-text" *ngIf="!day.events && !day.speakers && !day.lectures && !day.labs">
+				<span class="text">Nothing Assigned Today</span>
+			</div>
 	</div>
 </div>
