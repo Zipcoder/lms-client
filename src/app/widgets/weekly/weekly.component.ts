@@ -8,6 +8,7 @@ import { SpeakerService } from '../../services/speaker/speaker.service';
 import { Speaker } from '../../shared/models/speaker.model';
 import { EventService } from '../../services/event/event.service';
 import { Event } from '../../shared/models/event.model';
+import { DayViewComponent } from './dayview/dayview.component';
 
 @Component({
 	selector: 'ms-weekly',
@@ -20,6 +21,9 @@ export class WeeklyComponent implements OnInit {
 	private monday: Date;
 	private friday: Date;
 	private days: Day[] = [];
+	private dayShown: Day;
+	private selectedDay: number;
+	private dayToggled: Boolean = false;
 
 	constructor(
 		private lectureService: LectureService,
@@ -30,6 +34,9 @@ export class WeeklyComponent implements OnInit {
 
 	ngOnInit() {
 		this.today();
+		this.toggleAnimation();
+		this.dayShown = this.days[this.setInitDay()];
+		this.setClickedDay(this.setInitDay());
 	}
 
 	private getMonday = (date): Date => {
@@ -40,17 +47,22 @@ export class WeeklyComponent implements OnInit {
 	}
 
 	private today = () => {
-		this.monday = this.getMonday(this.now);
+		this.monday = this.getMonday(new Date);
 		this.setDays(this.monday.getDate());
+		console.log(this.monday);
 	}
 	private nextMonday = () => {
+		this.toggleAnimation();
 		let next: number = this.monday.getDate() + 7;
 		this.setDays(next);
+		this.setDayOnWeekChange();
 	}
 
 	private prevMonday = () => {
+		this.toggleAnimation();
 		let prev: number = this.monday.getDate() - 7;
 		this.setDays(prev);
+		this.setDayOnWeekChange();
 	}
 
 	private setDays = (start: number) => {
@@ -66,7 +78,7 @@ export class WeeklyComponent implements OnInit {
 		this.fetchLabs();
 		this.fetchSpeakers();
 		this.fetchEvents();
-
+		
 		console.log(this.days);
 	}
 
@@ -104,5 +116,48 @@ export class WeeklyComponent implements OnInit {
 				this.days[i].events = events[isoDate];
 			}
 		})
+	}
+
+	private changeDayBtnPressed(dayPressed, index){
+		this.setClickedDay(index);
+		this.toggleAnimation();
+		setTimeout(() => {
+			this.dayShown = dayPressed;
+		}, 500);
+	}
+
+	private setClickedDay( index){
+		this.selectedDay = index;
+	}
+
+	private toggleAnimation(){
+		this.dayToggled = true;
+		setTimeout(() => {
+			this.dayToggled = false;
+		}, 1000);
+	}
+
+	private setInitDay(){
+		for(var i = 0; i < this.days.length; i++){
+			if(this.days[i].date.getDate() === new Date().getDate()){
+				return i;
+			}
+		}
+	}
+
+	private setDayOnWeekChange(){
+		setTimeout(() => {
+			this.dayShown = this.days[this.selectedDay];
+		}, 500);
+	}
+
+	private todayBtnClicked(){
+		this.toggleAnimation();
+		this.today();
+		let index = this.setInitDay();
+		this.selectedDay = index;
+		setTimeout(() => {
+			this.dayShown = this.days[index];
+		}, 500);
 	}
 }

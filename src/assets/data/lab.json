@@ -4,13 +4,15 @@
 			"id":1,
 			"date": "2017-05-15",
 			"title":"Lab 1.1",
-			"repo":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
+			"repo":"Java2JavaScript-Lab-1",
+			"repoUrl":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
 		},
 		{
 			"id":1,
 			"date": "2017-05-15",
 			"title":"Lab 1.2",
-			"repo":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
+			"repo":"Java2JavaScript-Lab-1",
+			"repoUrl":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
 		}
 	],
 	"2017-05-16": [
@@ -18,7 +20,8 @@
 			"id":2,
 			"date": "2017-05-16",
 			"title":"Lab 2",
-			"repo":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
+			"repo":"Java2JavaScript-Lab-1",
+			"repoUrl":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
 		}
 	],
 	"2017-05-17":[
@@ -26,7 +29,8 @@
 			"id":3,
 			"date": "2017-05-17",
 			"title":"Lab 3",
-			"repo":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
+			"repo":"Java2JavaScript-Lab-1",
+			"repoUrl":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
 		}
 	],
 	"2017-05-18":[
@@ -34,7 +38,8 @@
 			"id":4,
 			"date": "2017-05-18",
 			"title":"Lab 4",
-			"repo":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
+			"repo":"Java2JavaScript-Lab-1",
+			"repoUrl":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
 		}
 	],
 	"2017-05-19": [
@@ -42,7 +47,8 @@
 			"id":5,
 			"date": "2017-05-19",
 			"title":"Lab 5",
-			"repo":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
+			"repo":"Java2JavaScript-Lab-1",
+			"repoUrl":"https://github.com/Zipcoder/Java2JavaScript-Lab-1"
 		}
 	]
 }
